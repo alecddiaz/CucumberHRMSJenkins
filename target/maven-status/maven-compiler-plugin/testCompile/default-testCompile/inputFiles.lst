@@ -1,0 +1,13 @@
+/Users/alecdiaz/Documents/hrms/src/test/java/pages/DashBoardPage.java
+/Users/alecdiaz/Documents/hrms/src/test/java/pages/AddEmployeePage.java
+/Users/alecdiaz/Documents/hrms/src/test/java/utils/Constants.java
+/Users/alecdiaz/Documents/hrms/src/test/java/Runners/SmokeRunner.java
+/Users/alecdiaz/Documents/hrms/src/test/java/utils/ExcelReading.java
+/Users/alecdiaz/Documents/hrms/src/test/java/pages/EmployeeListPage.java
+/Users/alecdiaz/Documents/hrms/src/test/java/steps/Hooks.java
+/Users/alecdiaz/Documents/hrms/src/test/java/utils/CommonMethods.java
+/Users/alecdiaz/Documents/hrms/src/test/java/steps/EmployeeSearchSteps.java
+/Users/alecdiaz/Documents/hrms/src/test/java/steps/LoginSteps.java
+/Users/alecdiaz/Documents/hrms/src/test/java/pages/LoginPage.java
+/Users/alecdiaz/Documents/hrms/src/test/java/utils/ConfigReader.java
+/Users/alecdiaz/Documents/hrms/src/test/java/steps/AddEmployeeSteps.java
