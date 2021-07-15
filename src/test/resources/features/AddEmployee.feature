@@ -37,3 +37,13 @@ Feature: Add Employee
       |Jon0404  | MS       |US      |
       |Jack0404 |MS        |US      |
       |MS0909   |MS        |US      |
+
+    @db
+    Scenario: Add the employee and testing it from the backend
+      When user enters first name "Yhisid" middle name "ds" and last name "dsksdk"
+      And capture the employeeId
+      And user clicks on save button option
+      Then query the hrms database
+      And verify the data from frontend and backend
+
+

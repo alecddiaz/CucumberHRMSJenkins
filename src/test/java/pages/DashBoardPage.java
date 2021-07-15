@@ -21,6 +21,14 @@ public class DashBoardPage extends CommonMethods {
     @FindBy(id ="menu_pim_viewEmployeeList")
     public WebElement employeeListOption;
 
+    @FindBy(id ="menu_admin_viewAdminModule")
+    public WebElement adminOption;
+
+    @FindBy(id="menu_admin_Job")
+    public WebElement jobDD;
+
+    @FindBy(id="menu_admin_viewJobTitleList")
+    public WebElement jobTitleSection;
 
     @FindBy(xpath="//div[@class='menu']/ul/li")
     public List<WebElement> dashboardtabs;

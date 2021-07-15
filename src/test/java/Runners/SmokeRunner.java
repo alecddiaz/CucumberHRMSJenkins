@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Login.feature",
+        features = "src/test/resources/features/AddJobTitle.feature",
         /*
         * glue is where we can find implementation for gherkin
         * steps we provide path of package for steps
@@ -38,7 +38,7 @@ import org.junit.runner.RunWith;
         * 1) and - text cases with only both tags will execute
         * 2) or - all tags chosen will execute
         *  */
-        tags="@simpletest",
+        tags="@db2",
 
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
 

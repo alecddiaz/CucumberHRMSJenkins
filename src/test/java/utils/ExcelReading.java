@@ -31,30 +31,38 @@ public class ExcelReading {
         sheet=book.getSheet(sheetName);
     }
 
+
+    //need for outer loop
     public static int getRowCount(){
         return sheet.getPhysicalNumberOfRows();
     }
 
+    //need for inner loop
     public static int getColsCount(int rowIndex){
         return sheet.getRow(rowIndex).getPhysicalNumberOfCells();
     }
 
+    //used to get data from cells using row and col index
     public static String getCellData(int rowIndex, int colIndex){
         return sheet.getRow(rowIndex).getCell(colIndex).toString();
     }
 
+
+    //loop to convert excel into List of maps using header as keys and data as values
+    //each row is its own map
     public static List<Map<String,String>> excelIntoListMap(String filePath, String sheetName){
         openExcel(filePath);
         getSheet(sheetName);
 
 
         List<Map<String,String>> ListData=new ArrayList<>();
+        Map<String,String> map;
 
         //outerLoop
         for (int row = 0; row < getRowCount(); row++) {
 
             //creating map for every row
-            Map<String,String> map=new LinkedHashMap<>();
+            map=new LinkedHashMap<>();
             //looping through the values all cell
             for (int col = 0; col < getColsCount(row); col++) {
                 map.put(getCellData(0,col),getCellData(row,col));
