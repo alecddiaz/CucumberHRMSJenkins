@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,9 +24,19 @@ public class CommonMethods {
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch(ConfigReader.getPropertyValue("browser")) {
             case "chrome":
-                //System.setProperty("webdriver.chrome.driver", "/Users/alecdiaz/Documents/TestNG/.idea/Drivers/chromedriver");
                 WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver();
+                //System.setProperty("webdriver.chrome.driver", "/Users/alecdiaz/Documents/TestNG/.idea/Drivers/chromedriver");
+                if(ConfigReader.getPropertyValue("headless").equals("true")){
+                    ChromeOptions chromeOptions=new ChromeOptions();
+                    //headless wont open chrome will just run in backend
+                    chromeOptions.setHeadless(true);
+                    driver=new ChromeDriver(chromeOptions);
+                }else{
+                    driver=new ChromeDriver();
+                }
+
+
+
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
